@@ -892,7 +892,7 @@ final List<Country> countryList = [
   Country(
     isoCode: "MK",
     phoneCode: "389",
-    name: "Macedonia, the former Yugoslav Republic of",
+    name: "Macedonia",
     iso3Code: "MKD",
   ),
   Country(
