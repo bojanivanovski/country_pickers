@@ -25,6 +25,16 @@ class CountryPickerUtils {
     return "assets/${isoCode.toLowerCase()}.png";
   }
 
+  static Widget getFlagImageWidgetFromCountryName(String country) {
+    return Image.asset(
+      CountryPickerUtils.getFlagImageAssetPathFromCountryname(country),
+      height: 20.0,
+      width: 30.0,
+      fit: BoxFit.fill,
+      package: "country_pickers",
+    );
+  }
+
   static Widget getDefaultFlagImage(Country country) {
     return Image.asset(
       CountryPickerUtils.getFlagImageAssetPath(country.isoCode),
