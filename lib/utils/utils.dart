@@ -13,6 +13,14 @@ class CountryPickerUtils {
     }
   }
 
+  static String getFlagImageAssetPathFromCountryname(String countryName) {
+    return getFlagImageAssetPath(countryList
+        .firstWhere(
+          (country) => country.name.toLowerCase() == countryName.toLowerCase(),
+        )
+        .isoCode);
+  }
+
   static String getFlagImageAssetPath(String isoCode) {
     return "assets/${isoCode.toLowerCase()}.png";
   }
