@@ -55,4 +55,17 @@ class CountryPickerUtils {
           "The initialValue provided is not a supported phone code!");
     }
   }
+
+  static String getIso3CodeByCountry(String countryName) {
+    try {
+      return countryList
+          .firstWhere(
+            (country) =>
+                country.name.toLowerCase() == countryName.toLowerCase(),
+          )
+          .iso3Code;
+    } catch (error) {
+      return "MK";
+    }
+  }
 }
