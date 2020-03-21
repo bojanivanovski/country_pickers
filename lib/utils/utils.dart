@@ -13,6 +13,17 @@ class CountryPickerUtils {
     }
   }
 
+  static Country getCountryByName(String name) {
+    try {
+      return countryList.firstWhere(
+        (country) => country.name.toLowerCase() == name.toLowerCase(),
+      );
+    } catch (error) {
+      return getCountryByPhoneCode("+389");
+      // throw Exception("The initialValue provided is not a supported iso code!");
+    }
+  }
+
   static String getFlagImageAssetPathFromCountryname(String countryName) {
     return getFlagImageAssetPath(countryList
         .firstWhere(
