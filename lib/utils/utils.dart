@@ -79,4 +79,17 @@ class CountryPickerUtils {
       return "MK";
     }
   }
+
+  static String getIlpcCodeByCountry(String countryName) {
+    try {
+      return countryList
+          .firstWhere(
+            (country) =>
+                country.name.toLowerCase() == countryName.toLowerCase(),
+          )
+          .ilpcCode;
+    } catch (error) {
+      return "MK";
+    }
+  }
 }
